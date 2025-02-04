@@ -4,6 +4,9 @@ FROM python:3.11
 # Install system dependencies
 RUN apt-get update && apt-get install -y graphviz
 
+# Verify Graphviz installation
+RUN dot -V
+
 # Set the working directory
 WORKDIR /app
 
